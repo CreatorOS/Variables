@@ -39,3 +39,33 @@ There are 3 types of variables in Solidity.
     uint timestamp = block.timestamp; // Current block timestamp
     address sender = msg.sender; // address of the caller
 ```
+
+## Constants
+
+Constants are variables that cannot be modified.
+
+Their value is hard coded and using constants can save gas cost.
+
+- It coding convention is to use all caps for constants.
+
+```
+    address public constant MY_ADDRESS = 0x777788889999AaAAbBbbCcccddDdeeeEfFFfCcCc;
+    uint public constant MY_UINT = 123;
+```
+
+## Immutable
+
+Immutable variables are like constants.
+Values of immutable variables can be set inside the constructor but cannot be modified afterwards.
+
+- Helpful for setting constant variables at time of deployment and not hardcoding like in case of `constant`.
+
+```
+    address public immutable MY_ADDRESS;
+    uint public immutable MY_UINT;
+
+    constructor(uint _myUint) {
+        MY_ADDRESS = msg.sender;
+        MY_UINT = _myUint;
+    }
+```
