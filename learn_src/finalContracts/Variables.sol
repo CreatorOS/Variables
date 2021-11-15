@@ -2,7 +2,7 @@
 pragma solidity ^0.8.3;
 
 contract Variables {
-    function doSomething() public view returns (uint256) {
+    function doSomething() public pure returns (uint256) {
         uint256 i = 456;
         return i;
     }
