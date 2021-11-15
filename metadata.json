@@ -5,7 +5,14 @@
   "setupCommands": ["npm i", "npx hardhat compile"],
   "compileCommand": "npx hardhat compile",
   "tests": [
-    { "itShould": "Compile", "command": "sh learn_tests/09.sh" }
+    { "itShould": "Compile", "command": "sh learn_tests/09.sh" },
+    { "itShould": "Call doSomething()", "command": "sh learn_tests/01.sh" },
+    { "itShould": "Call getNum()", "command": "sh learn_tests/02.sh" },
+    { "itShould": "Call setNum()", "command": "sh learn_tests/03.sh" },
+    { "itShould": "Call getSender()", "command": "sh learn_tests/04.sh" },
+    { "itShould": "Print timestamp and sender values", "command": "sh learn_tests/05.sh" },
+    { "itShould": "Print MY_ADDRESS and MY_UINT values", "command": "sh learn_tests/06.sh" },
+    { "itShould": "Print MY_ADDRESS2 and MY_UINT2 values", "command": "sh learn_tests/07.sh" }
   ],
   "learnerAccessibleFileList": ["contracts/*"]
 }
